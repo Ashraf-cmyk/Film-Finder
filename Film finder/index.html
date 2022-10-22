@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="Movie_list.js"></script>
+    <script defer src="script.js"></script>
+    <title>Film finder</title>
+  </head>
+  <body>
+    <nav class="nav-main">
+      <div class="btn-toggle-nav" onmouseover="toggleNav()"></div>
+      <h2>Film Finder</h2>
+      <div class="search-wrapper">
+        <form class="form">
+          <input
+            id="search"
+            type="text"
+            class="input"
+            placeholder="search..."
+          />
+          <button id="clear" class="clear-results">clear</button>
+        </form>
+      </div>
+      <div class="results-container">
+        <ul class="results-list" id="list"></ul>
+      </div>
+    </nav>
+    <aside class="nav-sidebar">
+      <ul>
+        <li>
+          <a>
+            <input
+              type="radio"
+              value="latest"
+              name="filter_film"
+              id="latest_films"
+            />
+            LATEST FILMS</a
+          >
+        </li>
+        <li>
+          <a
+            ><input
+              type="radio"
+              value="avengers"
+              name="filter_film"
+              id="avanger_films"
+            />
+            AVANGERS</a
+          >
+        </li>
+        <li>
+          <a
+            ><input
+              type="radio"
+              value="x_men"
+              name="filter_film"
+              id="x_men_films"
+            />
+            X MEN</a
+          >
+        </li>
+        <li>
+          <a>
+            <input
+              type="radio"
+              value="princess"
+              name="filter_film"
+              id="princess_films"
+            />
+            PRINCESS</a
+          >
+        </li>
+        <li>
+          <a>
+            <input
+              type="radio"
+              value="batman"
+              name="filter_film"
+              id="batman_films"
+            />
+            BATMAN</a
+          >
+        </li>
+      </ul>
+    </aside>
+    <main class="film_location">
+      <div id="films">
+        <ul class="Listed_Films"></ul>
+        <footer>/////////////////////////////////////////////</footer>
+      </div>
+    </main>
+  </body>
+</html>
