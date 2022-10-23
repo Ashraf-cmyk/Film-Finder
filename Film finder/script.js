@@ -36,8 +36,8 @@ addMoviesToDom = (movies) => {
   let movieList = movies.map((movie) => {
     let listitem = document.createElement("li");
     let movieLink = function () {
-      let linkPageId = movie.imdbID;
-      return "https://www.imdb.com/title/" + linkPageId;
+      let pageId = movie.imdbID;
+      return "https://www.imdb.com/title/" + pageId;
     };
 
     let href = document.createElement("a");
@@ -131,4 +131,21 @@ function filterMovies(wordInMovie) {
     }
   });
   addMoviesToDom(filterMovies);
+}
+
+//Searchbar/////////////////////////////////////////////////////////////
+
+function myFunction() {
+  var value = document.getElementById("search").value;
+  var results = [];
+  if (value) {
+    movies.forEach((movie) => {
+      movies.forEach((itemString) => {
+        if (itemString.toLowerCase().includes(value.toLowerCase())) {
+          results.push(`${value} found in ${itemString} in block ${movie}`);
+        }
+      });
+    });
+    console.log(results);
+  }
 }

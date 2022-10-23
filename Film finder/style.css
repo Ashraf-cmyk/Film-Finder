@@ -1,6 +1,10 @@
 body {
-  background-color: #111010;
+  background: linear-gradient(110deg, #3b3b3a 60%, #1d1d1c 60%);
   transition: all 0.5s ease-in-out;
+}
+
+div:hover li:not(:hover) {
+  filter: blur(2px);
 }
 
 .nav-main {
@@ -17,7 +21,11 @@ body {
 
 .nav-main h2 {
   font-family: Arial, Helvetica, sans-serif;
-  padding-left: 50%;
+  padding-left: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 div {
@@ -32,6 +40,7 @@ div {
   background-size: 100%;
   background-position: center;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .btn-toggle-nav:hover {
@@ -114,18 +123,7 @@ input {
 }
 
 .nav-sidebar ul li :hover {
-  background-color: red;
-}
-
-.nav-sidebar li:nth-child(2) a:hover {
-  background-color: green;
-}
-
-.nav-sidebar li:nth-child(3) a:hover {
-  background-color: yellow;
-}
-.nav-sidebar li:nth-child(4) a:hover {
-  background-color: blue;
+  background-color: orange;
 }
 
 .film_location {
@@ -147,4 +145,31 @@ input {
 
 .film_location div li:hover {
   transform: scale(1.1);
+}
+
+footer {
+  height: 30px;
+  width: 100%;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  position: fixed;
+  bottom: 0pt;
+  left: 0pt;
+  z-index: 1000;
+}
+
+.footer_contents {
+  width: 100%;
+  margin: auto;
+  height: 60px;
+  background-color: orange;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  font-size: xx-small;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
