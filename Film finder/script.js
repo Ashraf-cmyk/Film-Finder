@@ -124,18 +124,9 @@ function filterLatestMovies(year) {
   addMoviesToDom(filterYearMovies);
 }
 
-function filterMovies(wordInMovie) {
-  let filterMovies = movies.filter((movie) => {
-    if (movie.title.includes(wordInMovie)) {
-      return movie;
-    }
-  });
-  addMoviesToDom(filterMovies);
-}
-
 //Searchbar/////////////////////////////////////////////////////////////
 
-function myFunction() {
+/*function myFunction() {
   var value = document.getElementById("search").value;
   var results = [];
   if (value) {
@@ -148,4 +139,4 @@ function myFunction() {
     });
     console.log(results);
   }
-}
+}*/
